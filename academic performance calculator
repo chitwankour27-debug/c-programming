@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int s1, s2, s3, s4, s5;
+    scanf("%d" ,&s1);
+    scanf("%d" ,&s2);
+    scanf("%d" ,&s3);
+    scanf("%d" ,&s4);
+    scanf("%d" ,&s5);
+    int t;
+    
+    t = s1+s2+s3+s4+s5;
+    printf("%d ", t);
+    float average;
+    average = t/5;
+    printf("%.2f ", average);
+    float percentage;
+    percentage = t/5;
+    printf("%.2f ",percentage);
+    
+    return 0;
+}
