@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a, b;
+    double result;
+    
+    //Read input
+    scanf("%d %d", &a, &b);
+    
+    //Calculate power using pow()
+    result = pow(a, b);
+    
+    //Print result as integer if result is whole number
+    if (result == (int)result)
+        printf("%d\n", (int)result);
+    else
+        printf("%lf\n", result);
+    
+
+    
+    return 0;
+}
