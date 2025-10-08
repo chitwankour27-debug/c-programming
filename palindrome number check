@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n, last, rev=0,og;
+    
+    scanf("%d", &n);
+    og=n;
+    while(n!=0){
+        last= n%10;
+        rev=rev*10+last;
+        n=n/10;
+    }
+    if (rev==og){
+        printf("Palindrome\n");
+        
+    } else{
+        printf("Not Palindrome\n");
+    }
+
+       
+    return 0;
+}
