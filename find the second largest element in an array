@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <limits.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    } int l=0,s=0;
+    if (arr[0]>arr[1]){
+        l=arr[0];
+        s=arr[1];}
+    else if(arr[0]==arr[1]){
+        l=arr[0];
+        s= INT_MIN;
+    }
+    else{
+        l=arr[1];
+        s=arr[0];
+    }
+    for(int i=2;i<n;i++){
+        if(arr[i]>l){
+            s=l;
+            l=arr[i];
+        } else if (arr[i]>s&&arr[i]<l){
+            s=arr[i];
+        }
+    }if(s!=INT_MIN){
+        printf("%d",s);
+    }else{
+        printf("No second largest element");
+    
+    }
+
+   
+    return 0;
+}
